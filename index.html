@@ -1,13 +1,52 @@
 <html lang="en">
 
 <head>
+  <title>Gavroche</title>
+  <meta name="viewport" content="with=device-width, initial-scale=1.0"
   <meta charSet="utf-8"/>
   <link rel="stylesheet" href="styles/style.css" />
-  <title>Gavroche</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,900;1,100&display=swap" rel="stylesheet">
+  <link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'>
 </head>
 
 <body>
-  <h1>Welcome to my website !</h1>
-  <p>This site is still under construction and should be available soon (I'm learning CSS) !
-  <br>In the meantime, go checkout my <a href="https://github.com/G4vr0ch3/">github account</a> !</p>
+<section class="welcome">
+  <nav>
+    <a href="index.html"><img src="images/gavroche.png" alt="Gavroche"/></a>
+    <div class="Menu" id="menu">
+      <i class='bx bx-chevrons-right' onclick="hideMenu()"></i>
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Projects</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+    </div>
+    <i class='bx bx-chevrons-left' onclick="showMenu()"></i>
+  </nav>
+
+  <div class="text-box">
+    <h1>Gavroche</h1>
+    <p>Welcome on my website</p>
+
+    <a href="#" class="btn">Discover who I am</a>
+  </div>
+
+</section>
+
+<script>
+  var menu = document.getElementById("menu");
+
+  function showMenu(){
+    menu.style.right = "0";
+  }
+
+  function hideMenu(){
+    menu.style.right = "-200px";
+  }
+
+</script>
+
 </body>
