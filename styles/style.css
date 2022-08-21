@@ -13,7 +13,7 @@ Styles by Gavroche with <3
 .welcome {
   min-height: 100vh;
   min-width: 100%;
-  background-image: linear-gradient(rgba(33, 37, 43, 0.4), rgba(115, 147, 179, 0.9)),url("images/banner.png");
+  background-image: linear-gradient(rgba(33, 37, 43, 0.4), rgba(115, 147, 179, 0.9)),url("https://raw.githubusercontent.com/G4vr0ch3/G4vr0ch3.github.io/main/images/banner.png");
   background-position: center;
   background-size: cover;
   position: relative;
@@ -125,14 +125,14 @@ nav .bx{
   }
   .Menu {
     position: absolute;
-    padding: 10px 10px 10px 10px;
     background-image: linear-gradient(rgba(115, 147, 179, 1), rgba(115, 147, 179, 0.3));
     height: 100vh;
-    width 200px;
+    width: 0px;
     top: 0;
-    right: -200px;
+    right: 0px;
     text-align: left;
     z-index: 2;
+    overflow: hidden;
     transition: 1s;
   }
   nav .bx{
