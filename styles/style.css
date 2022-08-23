@@ -4,17 +4,26 @@ Styles by Gavroche with <3
 
 */
 
+@import 'compass/css3';
+
 * {
   margin: 0;
   padding: 0;
   font-family: 'Roboto', sans-serif;
+  scroll-behavior: smooth;
+}
+
+body {
+  background-image: url("file://wsl.localhost/kali-linux/home/arthur/G4vr0ch3.github.io/images/background.png");
+  background-position: top;
+  background-size: cover;
 }
 
 .welcome {
   min-height: 100vh;
   min-width: 100%;
-  background-image: linear-gradient(rgba(33, 37, 43, 0.4), rgba(115, 147, 179, 0.9)),url("https://raw.githubusercontent.com/G4vr0ch3/G4vr0ch3.github.io/main/images/banner.png");
-  background-position: center;
+  background-image: linear-gradient(rgba(33, 37, 43, 0.4), rgba(129, 158, 187, 0.9));
+  background-position: top;
   background-size: cover;
   position: relative;
 }
@@ -79,7 +88,7 @@ nav img {
   -webkit-transition:width .5s cubic-bezier(0.6, 0.2, 0, 0.9) .1s;
   -o-transition:width .5s cubic-bezier(0.6, 0.2, 0, 0.9) .1s;
   transition:width .5s cubic-bezier(0.6, 0.2, 0, 0.9) .1s;
-  background:rgba(115, 147, 179, 0.9);
+  background: rgba(115, 147, 179, 0.9);
 }
 
 .Menu ul li a::after {
@@ -144,11 +153,13 @@ nav .bx{
 
 
 .About {
-  background-image: linear-gradient( rgba(129, 158, 187, 0.9), white);
+  background-image: linear-gradient( rgba(129, 158, 187, 0.9), rgba(255, 255, 255, 0.6));
   min-height: 100vh;
+  text-align: center;
 }
 
 .About h1 {
+  color: #fff;
   padding-top: 10%;
   padding-bottom: 50px;
   text-align: center;
@@ -198,10 +209,11 @@ nav .bx{
 
 .Projects {
   min-height: 100vh;
-  background-image: linear-gradient(white, rgba(209, 107, 165, 0.5));
+  background-image: linear-gradient(rgba(255, 255, 255, 0.6), rgba(209, 107, 165, 0.5));
 }
 
 .Projects h1 {
+  color: #fff;
   padding-top: 10%;
   padding-bottom: 50px;
   text-align: center;
@@ -209,17 +221,87 @@ nav .bx{
   font-size: 75px;
 }
 
+.caps {
+  height: 60vh;
+  display: grid;
+  place-content: center;
+  gap: 0 0;
+  grid-template-columns: repeat(1, 1fr);
+  overflow: hidden;
+}
 
+.caps1{
+  gap: 15px;
+  display:flex;
+  place-content: center;
+  filter: drop-shadow(2px 2px 5px);
+}
 
+.caps2 {
+  gap: 15px;
+  display:flex;
+  place-content: center;
+  filter: drop-shadow(2px 2px 5px);
+}
 
+.caps3 h1{
+  margin: 0;
+  padding: 0;
+  filter: drop-shadow(0 0 0);
+  display:flex;
+  place-content: center;
+}
 
+.caps4 {
+  gap: 15px;
+  display:flex;
+  place-content: center;
+  filter: drop-shadow(2px 2px 5px);
+}
 
+.caps5{
+  gap: 15px;
+  display:flex;
+  place-content: center;
+  filter: drop-shadow(2px 2px 5px);
+}
 
+.capt {
+  height: 100px;
+  width: 100px;
+  object-fit: contain;
+  clip-path: polygon(50% 0, 100% 25%, 100% 75%, 50% 100%, 0 75%, 0 25%);
+  background-color: #262626;
+  box-sizing: 2px solid black;
+  border-width: 2px;
+  border-color: black;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: .7s;
+}
 
+.capt:hover {
+  transform: ;
+}
 
+.capt img{
+  transition: .5s;
+}
 
+.capt img:hover {
+  transform: scale(115%);
+  filter: brightness(1.5);
+}
 
+.ubuntu {
+  padding-right: 7%;
+}
 
+.linux {
+  padding-right: 5%;
+}
 
 @media(max-width: 1120px){
   .text-box h1 {
