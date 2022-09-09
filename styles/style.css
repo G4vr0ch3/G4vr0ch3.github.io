@@ -4,15 +4,21 @@ Styles by Gavroche with <3
 
 */
 
+:root {
+  --surface-color: #262626;
+  --curve: 40;
+}
+
 * {
   margin: 0;
   padding: 0;
   font-family: 'Roboto', sans-serif;
   scroll-behavior: smooth;
+  max-width: 100%;
 }
 
 body {
-  background-image: url("https://g4vr0ch3.github.io/images/background.png");
+  background-image: url("https://g4vr0ch3.github.io/images/background.png"), linear-gradient(rgba(255, 255, 255, 0.6), rgba(209, 107, 165, 0.5));;
   background-position: top;
   background-size: cover;
 }
@@ -292,6 +298,7 @@ nav .bx{
 }
 
 .capt img{
+
   transition: .5s;
 }
 
@@ -320,6 +327,8 @@ nav .bx{
 .Projects {
   min-height: 100vh;
   background-image: linear-gradient(rgba(255, 255, 255, 0.6), rgba(209, 107, 165, 0.5));
+  align-content: center;
+  margin-bottom: 0;
 }
 
 .Projects h1 {
@@ -330,6 +339,218 @@ nav .bx{
   font-weight: 900;
   font-size: 75px;
 }
+
+
+.cards {
+  display: grid;
+  justify-content: center;
+  grid-template-columns: repeat(4, 300px);
+  list-style-type: none;
+  gap: 2rem;
+  margin: 4rem 10vw;
+  padding: 0;
+  list-style-type: none;
+  margin-bottom: 25vh;
+}
+
+.cards:hover .card {
+  opacity:0.3;
+}
+
+.card {
+  position: relative;
+  display: block;
+  height: 100%;
+  border-radius: calc(var(--curve) * 1px);
+  overflow: hidden;
+  text-decoration: none;
+  transform-origin:center;
+  transform:perspective(800px) rotateY(15deg);
+  transition:0.5s;
+}
+
+.cards .card:hover {
+  transform:perspective(800px) rotateY(0deg);
+  opacity:1;
+}
+
+.card__image {
+  width: 100%;
+  height: auto;
+}
+
+.card__overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 1;
+  border-radius: calc(var(--curve) * 1px);
+  background-color: var(--surface-color);
+  transform: translateY(100%);
+  transition: .2s ease-in-out;
+}
+
+.card:hover .card__overlay {
+  transform: translateY(0);
+}
+
+.card__header {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 2em;
+  padding: 2em;
+  border-radius: calc(var(--curve) * 1px) 0 0 0;
+  background-color: var(--surface-color);
+  transform: translateY(-100%);
+  transition: .2s ease-in-out;
+}
+
+.card__arc {
+  width: 80px;
+  height: 80px;
+  position: absolute;
+  bottom: 100%;
+  right: 0;
+  z-index: 1;
+}
+
+.card__arc path {
+  fill: var(--surface-color);
+  d: path("M 40 80 c 22 0 40 -22 40 -40 v 40 Z");
+}
+
+.card:hover .card__header {
+  transform: translateY(0);
+}
+
+.card__thumb {
+  flex-shrink: 0;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+}
+
+.card__title {
+  font-size: 1em;
+  margin: 0 0 .3em;
+  color: #6A515E;
+}
+
+.card__tagline {
+  display: block;
+  margin: 1em 0;
+  font-family: "MockFlowFont";
+  font-size: .8em;
+  color: #D7BDCA;
+}
+
+.card__status {
+  font-size: .8em;
+  color: #D7BDCA;
+}
+
+.card__description {
+  padding: 0 2em 2em;
+  margin: 0;
+  color: #D7BDCA;
+  font-family: "MockFlowFont";
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3;
+  overflow: hidden;
+}
+
+
+
+
+
+
+.Projects .footer {
+  z-index: 1;
+  background-image: linear-gradient(rgba(255, 255, 255, 0.6), rgba(209, 107, 165, 0.5));
+  --footer-background: #ed5565;
+  display: grid;
+  position: relative;
+  grid-area: footer;
+  min-height: 12rem;
+  max-width: 100vw;
+}
+.Projects .footer .bubbles {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 1rem;
+  background: var(--footer-background);
+  filter: url("#blob");
+}
+.Projects .footer .bubbles .bubble {
+  position: absolute;
+  left: var(--position, 50%);
+  background: var(--footer-background);
+  border-radius: 100%;
+  animation: bubble-size var(--time, 4s) ease-in infinite var(--delay, 0s), bubble-move var(--time, 4s) ease-in infinite var(--delay, 0s);
+  transform: translate(-50%, 100%);
+}
+.Projects .footer .content {
+  z-index: 2;
+  display: grid;
+  grid-template-columns: 1fr auto;
+  grid-gap: 4rem;
+  padding: 2rem;
+  background: var(--footer-background);
+}
+.Projects .footer .content a, .Projects .footer .content p {
+  color: #f5f7fa;
+  text-decoration: none;
+}
+.Projects .footer .content b {
+  color: white;
+}
+.Projects .footer .content p {
+  margin: 0;
+  font-size: 0.75rem;
+}
+.Projects .footer .content > div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.Projects .footer .content > div > div {
+  margin: 0.25rem 0;
+}
+.Projects .footer .content > div > div > * {
+  margin-right: 0.5rem;
+}
+.Projects .footer .content > div .image {
+  align-self: center;
+  width: 4rem;
+  height: 4rem;
+  margin: 0.25rem 0;
+  background-size: cover;
+  background-position: center;
+}
+@keyframes bubble-size {
+  0%, 75% {
+    width: var(--size, 4rem);
+    height: var(--size, 4rem);
+ }
+  100% {
+    width: 0rem;
+    height: 0rem;
+ }
+}
+@keyframes bubble-move {
+  0% {
+    bottom: -4rem;
+ }
+  100% {
+    bottom: var(--distance, 10rem);
+ }
+}
+
 
 
 
