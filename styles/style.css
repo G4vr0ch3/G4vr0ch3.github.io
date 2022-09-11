@@ -12,9 +12,16 @@
 }
  body {
      background-image: url("https://g4vr0ch3.github.io/images/background.png"), linear-gradient(rgba(255, 255, 255, 0.6), rgba(209, 107, 165, 0.5));
-    ;
      background-position: top;
      background-size: cover;
+}
+#btn-back-to-top {
+  position: fixed;
+  justify-content: center;
+  bottom: 2vh;
+  right: 2vw;
+  display: none;
+  z-index: 20;
 }
  .welcome {
      min-height: 100vh;
@@ -263,6 +270,7 @@
      background-image: linear-gradient(rgba(255, 255, 255, 0.6), rgba(209, 107, 165, 0.5));
      align-content: center;
      margin-bottom: 0;
+     overflow: hidden;
 }
  .Projects h1 {
      color: #fff;
@@ -492,5 +500,10 @@
      .row {
          flex-direction: column;
     }
+    .cards{
+      display: grid;
+      justify-content: center;
+      grid-template-columns: repeat(1, 75%);
+    }
+
 }
- 
