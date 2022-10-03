@@ -1,6 +1,6 @@
 /* Styles by Gavroche with <3 */
  :root {
-     --surface-color: RGBA(38,38,0,38);
+     --surface-color: RGBA(38,38,38,0.4);
      --curve: 40;
 }
  * {
