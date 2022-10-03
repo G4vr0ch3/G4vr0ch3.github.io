@@ -310,7 +310,6 @@
  .cards .card:hover {
      transform:perspective(800px) rotateY(0deg);
      opacity:1;
-     background-color: rgb(36, 36, 36);
 }
  .card__image {
      width: 100%;
