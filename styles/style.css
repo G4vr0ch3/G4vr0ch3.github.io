@@ -14,6 +14,7 @@
      background-image: url("https://g4vr0ch3.github.io/images/background.png"), linear-gradient(rgba(255, 255, 255, 0.6), rgba(209, 107, 165, 0.5));
      background-position: top;
      background-size: cover;
+     background-repeat: repeat-y;
 }
  #btn-back-to-top {
      position: fixed;
@@ -363,6 +364,7 @@
      font-size: 1em;
      margin: 0 0 .3em;
      color: #6A515E;
+     background-color: RGBA(0,0,0,50);
 }
  .card__tagline {
      display: block;
