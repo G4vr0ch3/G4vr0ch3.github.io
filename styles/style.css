@@ -1,6 +1,6 @@
 /* Styles by Gavroche with <3 */
  :root {
-     --surface-color: RGBA(38,38,38,0.4);
+     --surface-color: rgba(38,38,38,0.7);
      --curve: 40;
 }
  * {
@@ -309,6 +309,7 @@
  .cards .card:hover {
      transform:perspective(800px) rotateY(0deg);
      opacity:1;
+     background-color: rgb(36, 36, 36);
 }
  .card__image {
      width: 100%;
@@ -327,6 +328,7 @@
 }
  .card:hover .card__overlay {
      transform: translateY(0);
+     background-color: rgb(38, 38, 38);
 }
  .card__header {
      position: relative;
@@ -353,6 +355,7 @@
 }
  .card:hover .card__header {
      transform: translateY(0);
+     background-color: rgb(38, 38, 38);
 }
  .card__thumb {
      flex-shrink: 0;
