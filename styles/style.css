@@ -473,7 +473,7 @@
          bottom: var(--distance, 10rem);
     }
 }
- @media(max-width: 1120px){
+ @media(max-width: 1240px){
      .text-box h1 {
          font-size: 50px;
     }
