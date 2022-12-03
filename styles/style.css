@@ -39,7 +39,8 @@
      align-items: center;
 }
  nav img {
-     width: 10%;
+     height: 10vh;
+     width: auto;
 }
  .Menu {
      flex: 1;
@@ -181,7 +182,6 @@
 }
  .col a:hover {
      color: rgba(255, 255, 255, 0.9);
-     font-size: 110%;
 }
  .col:hover {
      box-shadow: 0 0 20px 0px rgba(129, 158, 187, 0.8);
