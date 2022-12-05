@@ -17,8 +17,6 @@ body {
     color: white;
     overflow-x: hidden;
 
-    opacity: 0;
-    transition: opacity 0.5s;
 }
 
 .Welcome {
@@ -38,6 +36,8 @@ body {
     -ms-user-select: none;
     user-select: none;
 
+    opacity: 0;
+    transition: 0.6s;
 }
 
 .floater {

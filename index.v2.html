@@ -15,13 +15,13 @@
         <script type="text/javascript" src="scripts/jquery-3.6.0.min.js"></script>
      </head>
 
-<!-- Loader -->
-
-    <div class="loader-wrapper"><span class="loader"><span class="loader-inner"></span></span></div>
-
 <!-- Body -->
 
      <body>
+
+<!-- Loader -->
+
+        <div class="loader-wrapper"><span class="loader"><span class="loader-inner"></span></span></div>
 
 <!-- Welcome Scene -->
 
@@ -58,7 +58,7 @@
 
             $(window).on('load', function () {
                 $('.loader-wrapper').fadeOut("slow");
-                $('body').css("opacity", 1);
+                $('.Welcome').css("opacity", 1);
             })
 
             window.onscroll = function() {
