@@ -1,0 +1,48 @@
+<html>
+
+    <head>
+        <title>Petit Prince</title>
+        <meta name="viewport" content="with=device-width, initial-scale=1.0">
+        <link rel="icon" href="images/petitprince_contour.png">
+        <meta charSet="utf-8"/>
+        <link rel="stylesheet" href="styles/styles.v2.css"/>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,900;1,100&display=swap" rel="stylesheet">
+        <link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'>
+     </head>
+
+     <body>
+        <div id="Welcome" class="Welcome" data-pointer-events="true">
+           <section>
+                <img src="images/planete.png" data-speed="9" class="layer floater" id="floater0"/>
+                <img src="images/planete_1.png" data-speed="-5" class="layer floater" id="floater1"/>
+                <img src="images/planete.png" data-speed="2" class="layer floater" id="floater2"/>
+                <img src="images/etoile.png" data-speed="-3" class="layer floater" id="floater3"/>
+                <img src="images/etoile_1.png" data-speed="9" class="layer floater" id="floater4"/>
+                <img src="images/etoile_2.png" data-speed="-4" class="layer floater" id="floater5"/>
+                <img src="images/etoile_3.png" data-speed="8" class="layer floater" id="floater6"/>
+                <img src="images/etoile_4.png" data-speed="-5" class="layer floater" id="floater7"/>
+                <img src="images/filante.png" data-speed="3" class="layer floater" id="floater8"/>
+                <img src="images/etoile.png" data-speed="5" class="layer floater" id="floater9"/>
+                <img src="images/etoile_1.png" data-speed="-8" class="layer floater" id="floater10"/>
+                <img id="LOGO" class="layer" src="images/petitprince_contour.png" data-speed="1" onclick="location.href ='#About'"/>
+           </section>
+           <a id="Discover" href="#About">Discover</a>
+        </div>
+        <script type="text/javascript">
+            document.addEventListener("mousemove", parallax);
+            function parallax(e){
+                this.querySelectorAll('.layer').forEach(layer => {
+                    
+                    const speed = layer.getAttribute('data-speed')
+
+                    const x = (window.innerWidth - e.pageX*speed)/500
+                    const y = (window.innerHeight - e.pageY*speed)/500
+
+                    layer.style.transform = `translateX(${x}px) translateY(${y}px)`
+
+                });
+            }
+        </script>
+     </body>

@@ -1,0 +1,185 @@
+* {
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth;
+    max-width: 100%;
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+}
+
+*::-webkit-scrollbar {
+    display: none;
+  }
+  
+body {
+    background-color: black;
+    font-family: 'Roboto', sans-serif;
+    color: white;
+    overflow-x: hidden;
+}
+
+.Welcome {
+
+    margin: auto;
+
+    width: 100vw;
+    height: 100vh;
+
+    display: flex;
+    flex-direction: column;
+
+    align-items: center;
+    justify-content: center;
+
+}
+
+#floater0 {
+    position: absolute;
+    left: 45vw;
+    top: 7vh;
+    height: 5vh;
+}
+
+#floater1 {
+    position: absolute;
+    right: 30vw;
+    top: 40vh;
+    height: 4vh;
+}
+
+#floater2 {
+    position: absolute;
+    left: 33vw;
+    top: 60vh;
+    height: 3vh;
+}
+
+#floater3 {
+    position: absolute;
+    left: 35vw;
+    top: 25vh;
+    height: 4vh;
+}
+
+#floater4 {
+    position: absolute;
+    right: 40vw;
+    top: 20vh;
+    height: 4vh;
+}
+
+#floater5 {
+    position: absolute;
+    left: 30vw;
+    top: 50vh;
+    height: 3vh;
+}
+
+#floater6 {
+    position: absolute;
+    right: 35vw;
+    top: 60vh;
+    height: 4vh;
+}
+
+#floater7 {
+    position: absolute;
+    left: 45vw;
+    top: 70vh;
+    height: 4vh;
+}
+
+#floater8 {
+    position: absolute;
+    right: 30vw;
+    top: 9vh;
+    height: 3vh;
+}
+
+#floater9 {
+    position: absolute;
+    left: 35vw;
+    top: 40vh;
+    height: 3vh;
+}
+
+#floater10 {
+    position: absolute;
+    right: 35vw;
+    top: 25vh;
+    height: 3vh;
+}
+
+#LOGO {
+    height: 70vh;
+    position: absolute;
+    top: 5vh;
+    left: 0;
+    right: 0;
+    margin: auto;
+}
+
+.Welcome section {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex;
+}
+
+#Discover {
+    padding-top: 1vh;
+    padding-bottom: 1vh;
+    padding-left: 3vw;
+    padding-right: 3vw;
+
+    font-size: large;
+    font-weight: bolder;
+    text-decoration: none;
+    
+    border: 5px white solid;
+    border-radius: 12px;
+
+    position: absolute;
+    bottom: 10vh;
+
+    transition: .6s;
+}
+
+#Discover:visited {
+
+    font-size: large;
+    font-weight: bolder;
+    color: white;
+
+}
+
+
+@media screen and (max-width: 1200px) {
+
+    .floater {
+        visibility: hidden;
+    }
+
+}
+
+@media screen and (max-width: 550px) {
+    
+    .Welcome {
+        display: flex;
+        flex-direction: column;
+
+        align-items: center;
+        justify-content: center;
+    }
+    
+    #LOGO {
+        position: relative;
+        width: 100vw;
+        height: auto;
+    }
+
+    #Discover {
+        position: relative;
+        margin: 3vw;
+    }
+}
