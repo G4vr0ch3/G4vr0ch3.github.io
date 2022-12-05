@@ -3,16 +3,28 @@
     <head>
         <title>Petit Prince</title>
         <meta name="viewport" content="with=device-width, initial-scale=1.0">
-        <link rel="icon" href="images/petitprince_contour.png">
         <meta charSet="utf-8"/>
+        <link rel="preload" as="image" href="images/petitprince_contour.png"/>
+        <link rel="icon" href="images/petitprince_contour.png"/>
         <link rel="stylesheet" href="styles/styles.v2.css"/>
+        <link rel="stylesheet" href="styles/loader.css"/>
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,900;1,100&display=swap" rel="stylesheet">
         <link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'>
+        <script type="text/javascript" src="scripts/jquery-3.6.0.min.js"></script>
      </head>
 
+<!-- Loader -->
+
+    <div class="loader-wrapper"><span class="loader"><span class="loader-inner"></span></span></div>
+
+<!-- Body -->
+
      <body>
+
+<!-- Welcome Scene -->
+
         <div id="Welcome" class="Welcome" data-pointer-events="true">
            <section>
                 <img src="images/planete.png" data-speed="9" class="layer floater" id="floater0"/>
@@ -30,7 +42,23 @@
            </section>
            <a id="Discover" href="#About">Discover</a>
         </div>
+
+<!-- About Scene -->
+
+        <div class="About" id="About">
+            
+        </div>        
+
+
+<!-- JS -->
+
         <script type="text/javascript">
+
+            $(window).on('load', function () {
+                $('.loader-wrapper').fadeOut("slow");
+                $('body').css("opacity", 1);
+            })
+
             document.addEventListener("mousemove", parallax);
             function parallax(e){
                 this.querySelectorAll('.layer').forEach(layer => {
@@ -44,10 +72,7 @@
 
                 });
             }
-        </script>
 
-        <div class="About" id="About">
-            
-        </div>
+        </script>
 
      </body>
