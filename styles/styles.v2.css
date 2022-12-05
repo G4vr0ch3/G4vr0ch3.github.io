@@ -139,6 +139,8 @@ body {
     font-size: large;
     font-weight: bolder;
     text-decoration: none;
+
+    color: white;
     
     border: 5px white solid;
     border-radius: 12px;
