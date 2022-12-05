@@ -40,6 +40,10 @@ body {
 
 }
 
+.floater {
+    transition: 1s;
+}
+
 #floater0 {
     position: absolute;
     left: 45vw;
