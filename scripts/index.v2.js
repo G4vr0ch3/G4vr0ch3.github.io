@@ -42,6 +42,66 @@ function discover(){
     location.href ='#About'
 }
 
+
+// Socials effect
+
+
+window.onscroll = function() {
+    var socials = document.querySelector('.socials');
+
+    if (window.pageYOffset > window.innerHeight) {
+
+        socials.style.border = "none"
+
+        socials.querySelector('h1').style.opacity = 0
+
+        var ul = socials.querySelector('ul')
+
+        ul.style.display = "grid"
+        ul.style.gridTemplateColumns = "repeat(2, 5vh)"
+        ul.style.gridTemplateRows= "repeat(2,5vh)"
+        ul.style.gap = "1vh"
+        ul.style.border = "2px white solid"
+        ul.style.borderRadius = "15px"
+        ul.style.height = "fit-content"
+        ul.style.width = "fit-content"
+        ul.style.padding = "2vh"
+
+        socials.querySelectorAll('li').forEach(item => {
+            item.style.border = "none"
+            item.style.margin = "0"
+        })
+
+        
+        socials.style.position = "fixed"
+        socials.style.top = "10vh"
+        socials.style.right = "5vh"
+
+
+    } else {
+        socials.style.border = "2px white solid"
+
+        socials.querySelector('h1').style.opacity = 1
+
+        var ul = socials.querySelector('ul')
+
+        ul.style.display = "flex"
+        ul.style.border = "none"
+
+        socials.querySelectorAll('li').forEach(item => {
+            item.style.border = "2px white solid"
+            item.style.margin = "3vh"
+        })
+
+        socials.style.position = "relative"
+        socials.style.top = "20vh"
+
+    }
+}
+
+
+/*
+
 var path = document.querySelector('#line-path');
 var pathLength = path.getTotalLength();
 
@@ -70,3 +130,5 @@ window.addEventListener("scroll", function(e) {
     path.style.strokeDasharray = pathLength + ' ' + pathLength;
     } 
 });
+
+*/

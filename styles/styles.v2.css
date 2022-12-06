@@ -192,8 +192,6 @@ body {
 */
 
 .socials {
-    height: 100vh;
-
     position: relative;
     top: 20vh;
 
@@ -211,6 +209,8 @@ body {
     text-align: center;
     font-size: 4vh;
     font-weight: bolder;
+
+    transition: 0.5s;
 }
 
 .socials ul {
@@ -221,6 +221,8 @@ body {
     justify-content: center;
 
     list-style-type: none;
+
+    transition: 0.5s;
 }
 
 .socials li {
