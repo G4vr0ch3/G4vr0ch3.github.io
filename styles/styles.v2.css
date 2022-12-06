@@ -19,6 +19,8 @@ body {
 
 }
 
+/* Welcome Scene */
+
 .Welcome {
 
     margin: auto;
@@ -166,26 +168,97 @@ body {
 
 }
 
+/* About Scene */
+
 .About {
-    min-height: 100vh;
+    height: 500vh;
     width: 100vw;
     
     background-color: black;
     color: white;
+}
+
+/* Line
+
+#line-svg {
+    position: fixed;
+    top: 50vh;
+    left: 50%;
+    width: 150px;
+    height: 150px;
+    margin: -75px 0 0 -75px;
+}
+
+*/
+
+.socials {
+    height: 100vh;
+
+    position: relative;
+    top: 20vh;
+
+    border: 2px white solid;
+    border-radius: 15px;
+
+    width: fit-content;
+    height: fit-content;
+
+    margin: auto;
+}
+
+.socials h1 {
+    margin-top: 3vh;
+    text-align: center;
+    font-size: 4vh;
+    font-weight: bolder;
+}
+
+.socials ul {
 
     display: flex;
-    flex-direction: column;
 
     align-items: center;
     justify-content: center;
+
+    list-style-type: none;
 }
 
+.socials li {
+    display: inline-block;
 
+    text-align: center;
 
+    width: 4vw;
+    height: 5vh;
 
+    border: 2px white solid;
+    border-radius: 50px;
 
+    margin: 3vh;
 
+    transition: 0.5s;
+}
 
+.socials iconify-icon {
+    font-size: 3vh;
+    
+    margin-top: 1vh;
+    margin-bottom: 1vh;
+    padding: auto;
+}
+
+.socials a {
+    color: white;
+    text-decoration: none;
+}
+
+.socials li:hover {
+    border: 2px #9A1B1C solid;
+}
+
+.socials a:visited {
+    color: white;
+}
 
 
 

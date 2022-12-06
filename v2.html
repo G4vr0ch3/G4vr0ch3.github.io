@@ -12,12 +12,13 @@
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,900;1,100&display=swap" rel="stylesheet">
         <link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'>
+        <script src="https://code.iconify.design/iconify-icon/1.0.2/iconify-icon.min.js"></script>
         <script type="text/javascript" src="scripts/jquery-3.6.0.min.js"></script>
      </head>
 
 <!-- Body -->
 
-     <body>
+    <body>
 
 <!-- Loader -->
 
@@ -46,54 +47,26 @@
 <!-- About Scene -->
 
         <div class="About" id="About">
-            
+<!--            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100.6 107.6" id="line-svg">
+                <path fill="none" stroke="white" stroke-width="2" id="line-path" d="M43.7,65.8L19.9,83.3c-2.9,1.9-5.1,3.2-7.9,3.2c-5.7,0-10.5-5.1-10.5-10.8
+                    c0-4.8,3.8-8.2,7.3-9.8l27.9-12L8.8,41.4c-3.8-1.6-7.3-5.1-7.3-9.8c0-5.7,5.1-10.5,10.8-10.5c2.9,0,4.8,1,7.6,3.2l23.8,17.4
+                    l-3.2-28.2c-1-6.7,3.5-12,9.8-12c6.3,0,10.8,5.1,9.8,11.7L57,41.8l23.8-17.4c2.9-2.2,5.1-3.2,7.9-3.2c5.7,0,10.5,4.8,10.5,10.5
+                    c0,5.1-3.5,8.2-7.3,9.8L63.9,53.8l27.9,12c3.8,1.6,7.3,5.1,7.3,10.1c0,5.7-5.1,10.5-10.8,10.5c-2.5,0-4.8-1.3-7.6-3.2L57,65.8
+                    l3.2,28.2c1,6.7-3.5,12-9.8,12c-6.3,0-10.8-5.1-9.8-11.7L43.7,65.8z"/>
+            </svg>  -->
+
+            <div class="socials">
+                <h1>Socials</h1>
+                <ul>
+                    <li id="Github"><a href="https://github.com/PetitPrinc3" target="_blank" rel="noopener noreferrer"><iconify-icon icon="mdi:github"></iconify-icon></a></li>
+                    <li id="Discord"><a href="https://discord.com/users/PetitPrince#2871" target="_blank" rel="noopener noreferrer"><iconify-icon icon="ic:baseline-discord"></iconify-icon></a></li>
+                    <li id="Email"><a href="mailto:gavrochebackups@gmail.com" target="_blank" rel="noopener noreferrer"><iconify-icon icon="simple-icons:gmail"></iconify-icon></a></li>
+                    <li id="Thm"><a href="https://tryhackme.com/p/G4vr0ch3" target="_blank" rel="noopener noreferrer"><iconify-icon icon="simple-icons:tryhackme"></iconify-icon></a></li>
+                </ul>
+            </div>
+
         </div>        
 
-
-<!-- JS -->
-
-        <script type="text/javascript">
-
-            var window_height = window.innerHeight;
-
-            $(window).on('load', function () {
-                $('.loader-wrapper').fadeOut("slow");
-                $('.Welcome').css("opacity", 1);
-            })
-
-            window.onscroll = function() {
-                if (window.pageYOffset == 0) {
-                    document.querySelectorAll('.floater').forEach(floater => {
-                        var delay = Math.random()*2;
-                        floater.style.transition = `${delay}s`;
-                        floater.style.transform = `translateY(0)`;
-                    })
-                }
-            }
-
-            function discover(){
-                document.querySelectorAll('.floater').forEach(floater => {
-                    floater.style.transform = `translateY(-100vh)`;
-                })
-                location.href ='#About'
-            }
-
-            document.addEventListener("mousemove", parallax);
-            function parallax(e){
-                this.querySelectorAll('.layer').forEach(layer => {
-                    
-                    const speed = layer.getAttribute('data-speed')
-
-                    const x = (window.innerWidth - e.pageX*speed)/500
-                    const y = (window.innerHeight - e.pageY*speed)/500
-
-                    layer.style.transform = `translateX(${x}px) translateY(${y}px)`
-
-                });
-            }
-
-
-
-        </script>
-
-     </body>
+        <script type="text/javascript" src="scripts/index.v2.js"></script>
+    
+    </body>
