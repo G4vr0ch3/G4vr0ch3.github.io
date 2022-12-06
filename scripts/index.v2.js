@@ -25,16 +25,6 @@ function parallax(e){
 
 // Discover effect
 
-window.onscroll = function() {
-    if (window.pageYOffset == 0) {
-        document.querySelectorAll('.floater').forEach(floater => {
-            var delay = Math.random()*2;
-            floater.style.transition = `${delay}s`;
-            floater.style.transform = `translateY(0)`;
-        })
-    }
-}
-
 function discover(){
     document.querySelectorAll('.floater').forEach(floater => {
         floater.style.transform = `translateY(-100vh)`;
@@ -42,24 +32,36 @@ function discover(){
     location.href ='#About'
 }
 
-
 // Socials effect
 
-
 window.onscroll = function() {
-    var socials = document.querySelector('.socials');
 
-    if (window.pageYOffset > window.innerHeight) {
+    if (window.pageYOffset == 0) {
+        document.querySelectorAll('.floater').forEach(floater => {
+            var delay = Math.random()*2;
+            floater.style.transition = `${delay}s`;
+            floater.style.transform = `translateY(0)`;
+        })
+    }
 
-        socials.style.border = "none"
+    if (window.pageYOffset > window.innerHeight/10) {
+        document.getElementById('Whoami').style.transform = 'translateX(0)'
+        document.querySelectorAll(".social_item" ).forEach(item => {
+            item.style.transform = 'translateY(0)'
+        })
+    }
 
-        socials.querySelector('h1').style.opacity = 0
+    var ul = document.getElementById('social_list')
 
-        var ul = socials.querySelector('ul')
+    if (window.pageYOffset > window.innerHeight && window.innerWidth > 550) {
+
+        console.log('up')
+
+        $('.Socials').css("opacity", 0)
 
         ul.style.display = "grid"
         ul.style.gridTemplateColumns = "repeat(2, 5vh)"
-        ul.style.gridTemplateRows= "repeat(2,5vh)"
+        ul.style.gridTemplateRows = "repeat(2,5vh)"
         ul.style.gap = "1vh"
         ul.style.border = "2px white solid"
         ul.style.borderRadius = "15px"
@@ -67,38 +69,41 @@ window.onscroll = function() {
         ul.style.width = "fit-content"
         ul.style.padding = "2vh"
 
-        socials.querySelectorAll('li').forEach(item => {
+        ul.querySelectorAll('li').forEach(item => {
             item.style.border = "none"
             item.style.margin = "0"
+            item.style.backgroundColor = "black"
+
+            item.querySelector("a").style.color = "white"
+
         })
 
-        
-        socials.style.position = "fixed"
-        socials.style.top = "10vh"
-        socials.style.right = "5vh"
+        document.getElementById('SiteMap').prepend(ul)
 
+        $('.SiteMap').css("opacity", 1)
 
-    } else {
-        socials.style.border = "2px white solid"
+    } else if (window.innerWidth > 550) {
 
-        socials.querySelector('h1').style.opacity = 1
-
-        var ul = socials.querySelector('ul')
-
+        $('.SiteMap').css("opacity", 0)
+  
         ul.style.display = "flex"
         ul.style.border = "none"
 
-        socials.querySelectorAll('li').forEach(item => {
+        ul.querySelectorAll('li').forEach(item => {
             item.style.border = "2px white solid"
             item.style.margin = "3vh"
+            item.style.margin = "0"
+            item.style.backgroundColor = "white"
+
+            item.querySelector("a").style.color = "black"
         })
 
-        socials.style.position = "relative"
-        socials.style.top = "20vh"
+        document.getElementById('Socials').prepend(ul)
+
+        $('.Socials').css("opacity", 1)
 
     }
 }
-
 
 /*
 

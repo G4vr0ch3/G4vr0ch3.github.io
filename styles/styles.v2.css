@@ -171,11 +171,30 @@ body {
 /* About Scene */
 
 .About {
-    height: 500vh;
+    display: flex;
+    flex-direction: column;
+
+    align-items: center;
+    justify-content: center;
+
+    height: 100vh;
     width: 100vw;
-    
+
     background-color: black;
     color: white;
+}
+
+.About h1 {
+    margin: auto;
+    margin-bottom: 0;
+    text-align: center;
+
+
+    font-weight: bolder;
+    font-size: 20vh;
+
+    transition: all 0.5s ease-in-out;
+    transform: translateX(-5rem);
 }
 
 /* Line
@@ -191,26 +210,25 @@ body {
 
 */
 
+/* Socials */
+
 .socials {
+    max-height: 10vh;
+
     position: relative;
-    top: 20vh;
+    left: 0;
+    right: 0;
 
-    border: 2px white solid;
-    border-radius: 15px;
-
-    width: fit-content;
-    height: fit-content;
+    width: auto;
+    height: auto;
 
     margin: auto;
-}
+    margin-top: 0;
+    margin-bottom: 0;
 
-.socials h1 {
-    margin-top: 3vh;
-    text-align: center;
-    font-size: 4vh;
-    font-weight: bolder;
+    opacity: 1;
 
-    transition: 0.5s;
+    transition: opacity 0.5s ease-in-out;
 }
 
 .socials ul {
@@ -219,10 +237,15 @@ body {
 
     align-items: center;
     justify-content: center;
+    
+    top: 0;
+    bottom: 0;
+
+    margin: auto;
 
     list-style-type: none;
 
-    transition: 0.5s;
+    transition: 0.2s;
 }
 
 .socials li {
@@ -233,12 +256,15 @@ body {
     width: 4vw;
     height: 5vh;
 
+    background-color: white;
+
     border: 2px white solid;
     border-radius: 50px;
 
     margin: 3vh;
 
-    transition: 0.5s;
+    transition: all 0.2s ease-in-out;
+    transform: translateY(5rem);
 }
 
 .socials iconify-icon {
@@ -250,31 +276,154 @@ body {
 }
 
 .socials a {
-    color: white;
+    color: black;
     text-decoration: none;
 }
 
 .socials li:hover {
-    border: 2px #9A1B1C solid;
+    background-color: #9A1B1C;
 }
 
 .socials a:visited {
+    color: black;
+}
+
+/* Navigation */
+
+.SiteMap {
+    display: flex;
+    flex-direction: column;
+
+    row-gap: 3vh;
+    
+    align-items: center;
+    justify-content: center;
+
+    height: 50vh;
+
+    position: fixed;
+    right: 5vh;
+    top: 25vh;
+
+    opacity: 0;
+
+    transition: opacity 0.5s ease-in-out;
+}
+
+.SiteMap ul {
+    display: flex;
+    flex-direction: column;
+
+    align-items: center;
+    justify-content: center;
+
+    list-style-type: none;
+
+    transition: 0.2s;
+
+    width: 15vh;
+}
+
+.SiteMap li {
+    width: 15vh;
+    
+    text-align: center;
+
+    border: 2px white solid;
+    border-radius: 15px;
+
+    margin-bottom: 3vh;
+    padding-top: 1vh;
+    padding-bottom: 1vh;
+
+    transition: all 0.3s ease-in-out;
+}
+
+.SiteMap li:hover {
+    background-color: #9A1B1C;
+}
+
+.SiteMap a {
     color: white;
+    text-decoration: none;
+    font-size: 2vh;
+
+    z-index: 9999;
+}
+
+.SiteMap a:visited {
+    color: white;
+    text-decoration: none;
+    font-size: 3vh;
 }
 
 
+.Term {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    margin-top: 0;
+    
+    padding: 10vh;
+}
+
+.Term p {
+    color: white;
+    font-size: 2vh;
+}
+
+.bounceBtn {
+    animation: pulse 1s infinite;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 2vh;
+    margin-bottom: auto;
+    -moz-animation: bounce 2s infinite;
+    -webkit-animation: bounce 2s infinite;
+    animation: bounce 2s infinite;
+}
+
+@keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {
+        -moz-transform: translateY(0);
+        -ms-transform: translateY(0);
+        -webkit-transform: translateY(0);
+        transform: translateY(0);
+    }
+    40% {
+        -moz-transform: translateY(-10px);
+        -ms-transform: translateY(-10px);
+        -webkit-transform: translateY(-10px);
+        transform: translateY(-10px);
+    }
+    60% {
+        -moz-transform: translateY(-5px);
+        -ms-transform: translateY(-5px);
+        -webkit-transform: translateY(-5px);
+        transform: translateY(-5px);
+    }
+}
+
+.bounceBtn a {
+    color: black;
+    font-weight: bolder;
+    text-decoration: none;
+}
+
+.bounceBtn a:visited {
+    color: black;
+    font-weight: bolder;
+    text-decoration: none;
+}
 
 
+/* Skills Scene */
 
-
-
-
-
-
-
-
-
-
+.Skills {
+    height: 100vh;
+}
 
 
 
@@ -284,6 +433,40 @@ body {
 
     .floater {
         visibility: hidden;
+    }
+
+    .About h1 {
+        font-size: 20vw;
+    }
+
+    .Socials ul {
+        width: 100vw;
+
+        display: flex;
+        flex-direction: row;
+
+        align-items: center;
+        justify-content: center;
+    }
+
+    .Socials li {
+        width: fit-content;
+        height: fit-content;
+
+        margin-top: 0;
+        margin-bottom: 0;
+        margin-right: 1vw;
+        margin-left: 1vw;
+
+        padding-top: 1vh;
+        padding-bottom: 1vh;
+        padding-left: 2vh;
+        padding-right: 2vh;
+
+    }
+
+    iconify-icon {
+        font-size: 1vw;
     }
 
 }
