@@ -91,8 +91,8 @@ window.onscroll = function() {
 
         ul.querySelectorAll('li').forEach(item => {
             item.style.border = "2px white solid"
-            item.style.margin = "3vh"
-            item.style.margin = "0"
+            item.style.marginRight = "1vw"
+            item.style.marginLeft = "1vw"
             item.style.backgroundColor = "white"
 
             item.querySelector("a").style.color = "black"

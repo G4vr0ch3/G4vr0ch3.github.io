@@ -363,6 +363,8 @@ body {
     align-items: center;
     justify-content: center;
 
+    width: 33vw;
+
     margin-top: 0;
     
     padding: 10vh;
@@ -371,7 +373,19 @@ body {
 .Term p {
     color: white;
     font-size: 2vh;
+    width: 33vw;
+    line-height: 3vh;
 }
+
+.Term .t_line {
+    float: left;
+    line-height: 10vh;
+}
+
+.Term .t_emo {
+    text-align: right;
+}
+
 
 .bounceBtn {
     animation: pulse 1s infinite;
@@ -467,6 +481,10 @@ body {
 
     iconify-icon {
         font-size: 1vw;
+    }
+
+    .Term {
+        width: 80vw;
     }
 
 }
