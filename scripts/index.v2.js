@@ -53,55 +53,11 @@ window.onscroll = function() {
 
     var ul = document.getElementById('social_list')
 
-    if (window.pageYOffset > window.innerHeight && window.innerWidth > 550) {
-
-        console.log('up')
-
-        $('.Socials').css("opacity", 0)
-
-        ul.style.display = "grid"
-        ul.style.gridTemplateColumns = "repeat(2, 5vh)"
-        ul.style.gridTemplateRows = "repeat(2,5vh)"
-        ul.style.gap = "1vh"
-        ul.style.border = "2px white solid"
-        ul.style.borderRadius = "15px"
-        ul.style.height = "fit-content"
-        ul.style.width = "fit-content"
-        ul.style.padding = "2vh"
-
-        ul.querySelectorAll('li').forEach(item => {
-            item.style.border = "none"
-            item.style.margin = "0"
-            item.style.backgroundColor = "black"
-
-            item.querySelector("a").style.color = "white"
-
-        })
-
-        document.getElementById('SiteMap').prepend(ul)
-
+    if (window.pageYOffset > 1.4*window.innerHeight && window.innerWidth > 550) {
         $('.SiteMap').css("opacity", 1)
-
     } else if (window.innerWidth > 550) {
 
         $('.SiteMap').css("opacity", 0)
-  
-        ul.style.display = "flex"
-        ul.style.border = "none"
-
-        ul.querySelectorAll('li').forEach(item => {
-            item.style.border = "2px white solid"
-            item.style.marginRight = "1vw"
-            item.style.marginLeft = "1vw"
-            item.style.backgroundColor = "white"
-
-            item.querySelector("a").style.color = "black"
-        })
-
-        document.getElementById('Socials').prepend(ul)
-
-        $('.Socials').css("opacity", 1)
-
     }
 }
 
