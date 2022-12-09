@@ -62,9 +62,9 @@ window.onscroll = async function() {
         })
     }
 
-    if (window.pageYOffset > 1.1*window.innerHeight && window.innerWidth > 550) {
+    if (window.pageYOffset > 1.1*window.innerHeight && window.innerWidth > 700) {
         $('.SiteMap').css("opacity", 1)
-    } else if (window.innerWidth > 550) {
+    } else if (window.innerWidth > 700) {
 
         $('.SiteMap').css("opacity", 0)
     }
