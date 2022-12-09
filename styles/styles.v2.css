@@ -556,6 +556,8 @@ t {
     height: fit-content;
     width: 100vw;
 
+    padding-top: 10vh;
+    padding-bottom: 10vh;
 }
 
 #SkillsH1 {
@@ -698,6 +700,10 @@ t {
 
 @media screen and (max-width: 1200px) {
     
+    #SkillsH1 {
+        font-size: 6vw;
+    }
+
     #Discover {
         position: relative;
         margin: 3vw;
@@ -725,13 +731,14 @@ t {
 
 @media screen and (max-width: 750px) {
 
-    .Wrapper {
+    .Skills {
         display: flex;
         flex-direction: column;
 
         align-items: center;
+        justify-content: center;
     }
-    
+
     .Welcome {
         display: flex;
         flex-direction: column;

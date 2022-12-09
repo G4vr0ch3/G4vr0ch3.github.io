@@ -1,11 +1,13 @@
 var window_height = window.innerHeight;
 var cmd_filed = false;
+var trigger_height = window_height;
 
 // Loader
 
 if (window.innerWidth < 1000) {
     $('#skills-wrapper').css("visibility", "hidden")
     $('#list-wrapper').css("visibility", "visible")
+    trigger_height = (9/10)*window.innerHeight
 }
 
 window.onresize = function () {
@@ -88,7 +90,7 @@ window.onscroll = async function() {
         $('.SiteMap').css("opacity", 0)
     }
 
-    if (window.pageYOffset >= window.innerHeight && !cmd_filed) {
+    if (window.pageYOffset >= trigger_height && !cmd_filed) {
 
         var cmd = "whoami"
 
