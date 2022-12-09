@@ -93,7 +93,6 @@ window.onscroll = async function() {
         
         i = 0;
         while(i < r_lines.length) {
-            console.log(r_lines[i])
             r_lines[i].style.opacity = "1";
             emo[i].style.opacity = "1";
             await waitForMs(400);
@@ -103,36 +102,3 @@ window.onscroll = async function() {
     }    
 
 }
-
-/*
-
-var path = document.querySelector('#line-path');
-var pathLength = path.getTotalLength();
-
-path.style.strokeDasharray = pathLength + ' ' + pathLength;
-path.style.strokeDashoffset = pathLength;
-path.getBoundingClientRect();
-
-window.addEventListener("scroll", function(e) {
- 
-    if (window.pageYOffset >= window.innerHeight) {
-        var scrollPercentage = (document.body.scrollTop - window.innerHeight) / (document.body.scrollHeight - 2*window.innerHeight);
-    } else {
-        scrollPercentage = 0 ;
-    } ;
-  
-    console.log(scrollPercentage)
-
-    var drawLength = pathLength * scrollPercentage;
-
-    path.style.strokeDashoffset = pathLength - drawLength;
-
-    if (scrollPercentage >= 0.99) {
-    path.style.strokeDasharray = "none";
-
-    } else {
-    path.style.strokeDasharray = pathLength + ' ' + pathLength;
-    } 
-});
-
-*/

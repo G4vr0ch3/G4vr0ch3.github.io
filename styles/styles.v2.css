@@ -29,6 +29,10 @@ body {
     font-family: 'Roboto', sans-serif;
     color: white;
     overflow-x: hidden;
+
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
 }
 
 li:hover {
@@ -50,10 +54,6 @@ li:hover {
 
     align-items: center;
     justify-content: center;
-
-    -webkit-user-select: none;
-    -ms-user-select: none;
-    user-select: none;
 
     opacity: 0;
     transition: 0.6s;
@@ -213,19 +213,6 @@ li:hover {
     transition: all 0.5s ease-in-out;
     transform: translateX(-5rem);
 }
-
-/* Line
-
-#line-svg {
-    position: fixed;
-    top: 50vh;
-    left: 50%;
-    width: 150px;
-    height: 150px;
-    margin: -75px 0 0 -75px;
-}
-
-*/
 
 /* Socials */
 
@@ -562,10 +549,106 @@ t {
 /* Skills Scene */
 
 .Skills {
-    height: 100vh;
+    min-height: 100vh;
+    width: 100vw;
+    margin: auto;
+    position: relative;
 }
 
+#SkillsH1 {
+    font-family: 'Roboto';
+    font-size: 10vh;
+    text-align: center;
 
+    padding-top: 8vh;
+    margin-bottom: 15vh;
+}
+
+.center-bar {
+    height: 120vh;
+    position: absolute;
+    top: 30vh;
+    left: calc(50vw - 2px);
+    border-left: 4px #fff solid;
+}
+
+.text-box {
+    height: auto;
+    width: 45vw;
+    clear: both;
+}
+
+.box-content {
+    width: fit-content;
+    height: auto;
+    border: 3px white solid;
+    border-radius: 15px;
+    padding: 5vh;
+}
+
+.box-content i {
+    font-size: 2vh;
+}
+
+.box-content p {
+    font-size: 2vh;
+    font-weight: bold;
+}
+
+.skills .text-box:not(:first-child) {
+    margin-top: -5vh;
+}
+
+.box-left {
+    text-align: right;
+    float: left;
+    margin-left: auto;
+}
+
+.box-left .box-content {
+    border-top-right-radius: 0;
+    float: right;
+}
+
+.box-left h1 {
+    padding: 0;
+    margin: auto;
+    font-size: 4vh;
+    font-weight: bolder;
+}
+
+.box-right {
+    text-align: left;
+    float: right;
+    margin-right: auto;
+}
+
+.box-right .box-content {
+    border-top-left-radius: 0;
+    padding-top: 3vh;
+    padding-bottom: 3vh;
+    float: left;
+}
+
+.box-right h1 {
+    margin-bottom: 2vh;
+    font-size: 2vh;
+    font-weight: bold;
+}
+
+.box-right ul {
+    list-style: none;
+}
+
+.box-right li {
+    font-size: 2vh;
+    font-weight: normal;
+    font-style: italic;
+}
+
+.box-right li:hover {
+    background-color: black;
+}
 
 
 
