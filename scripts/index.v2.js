@@ -3,6 +3,25 @@ var cmd_filed = false;
 
 // Loader
 
+if (window.innerWidth < 1000) {
+    $('#skills-wrapper').css("visibility", "hidden")
+    $('#list-wrapper').css("visibility", "visible")
+}
+
+window.onresize = function () {
+    if (window.innerWidth < 750) {
+        $('.SiteMap').css("opacity", 0)
+    }
+    if ( window.innerWidth < 1000 ) {
+        $('#skills-wrapper').css("visibility", "hidden")
+        $('#list-wrapper').css("visibility", "visible")
+    }
+    else {
+        $('#skills-wrapper').css("visibility", "visible")
+        $('#list-wrapper').css("visibility", "hidden")
+    }
+}
+
 $(window).on('load', function () {
     $('.loader-wrapper').fadeOut("slow");
     $('.Welcome').css("opacity", 1);
@@ -62,9 +81,9 @@ window.onscroll = async function() {
         })
     }
 
-    if (window.pageYOffset > 1.1*window.innerHeight && window.innerWidth > 700) {
+    if (window.pageYOffset > 1.1*window.innerHeight && window.innerWidth > 750) {
         $('.SiteMap').css("opacity", 1)
-    } else if (window.innerWidth > 700) {
+    } else if (window.innerWidth > 750) {
 
         $('.SiteMap').css("opacity", 0)
     }
