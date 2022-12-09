@@ -96,7 +96,7 @@ window.onscroll = async function() {
             console.log(r_lines[i])
             r_lines[i].style.opacity = "1";
             emo[i].style.opacity = "1";
-            await waitForMs(200);
+            await waitForMs(400);
             i++
         }
 
