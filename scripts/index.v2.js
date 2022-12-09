@@ -1,4 +1,5 @@
 var window_height = window.innerHeight;
+var cmd_filed = false;
 
 // Loader
 
@@ -23,6 +24,12 @@ function parallax(e){
     });
 }
 
+// Terminal functions
+
+function waitForMs(ms) {
+    return new Promise(resolve => setTimeout(resolve, ms))
+  }
+
 // Discover effect
 
 function discover(){
@@ -32,9 +39,11 @@ function discover(){
     location.href ='#About'
 }
 
-// Socials effect
+// Scroll effects
 
-window.onscroll = function() {
+window.onscroll = async function() {
+
+    // Whoami translation
 
     if (window.pageYOffset == 0) {
         document.querySelectorAll('.floater').forEach(floater => {
@@ -44,6 +53,8 @@ window.onscroll = function() {
         })
     }
 
+    // Navigation bar
+
     if (window.pageYOffset > window.innerHeight/10) {
         document.getElementById('Whoami').style.transform = 'translateX(0)'
         document.querySelectorAll(".social_item" ).forEach(item => {
@@ -51,14 +62,46 @@ window.onscroll = function() {
         })
     }
 
-    var ul = document.getElementById('social_list')
-
-    if (window.pageYOffset > 1.4*window.innerHeight && window.innerWidth > 550) {
+    if (window.pageYOffset > 1.1*window.innerHeight && window.innerWidth > 550) {
         $('.SiteMap').css("opacity", 1)
     } else if (window.innerWidth > 550) {
 
         $('.SiteMap').css("opacity", 0)
     }
+
+    if (window.pageYOffset >= window.innerHeight && !cmd_filed) {
+
+        var cmd = "whoami"
+
+        cmd_filed = true
+
+        const cmd_letters = cmd.split("");
+        let i = 0;
+        while(i < cmd_letters.length) {
+            await waitForMs(100);
+            $('#cmd').append(cmd_letters[i]);
+            i++
+        }
+
+        await waitForMs(200);
+
+        $('.input-cursor').css('animation', 'none')
+        $('.input-cursor').css('opacity', '0')
+
+        var r_lines = document.querySelectorAll('.r_line')
+        var emo = document.querySelectorAll('.term_emo')
+        
+        i = 0;
+        while(i < r_lines.length) {
+            console.log(r_lines[i])
+            r_lines[i].style.opacity = "1";
+            emo[i].style.opacity = "1";
+            await waitForMs(200);
+            i++
+        }
+
+    }    
+
 }
 
 /*

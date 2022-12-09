@@ -456,6 +456,23 @@ li:hover {
     padding: 10vh;
 }
 
+.input-cursor {
+    display: inline-block;
+    width: 2px;
+    height: 2vh;
+    background-color: white;
+    margin-left: 3px;
+    transform: translateY(0.1rem);
+    animation: blink .6s linear infinite alternate;
+}
+
+@keyframes blink {
+    0% {opacity: 1;}
+    40% {opacity: 1;}
+    60% {opacity: 0;}
+    100% {opacity: 0;}
+  }
+
 .Term p {
     font-family: 'Roboto' cursive;
     color: white;
@@ -473,9 +490,10 @@ li:hover {
     text-align: right;
 }
 
-
 t {
     font-family: 'Source Code Pro', monospace;
+    opacity: 0;
+    transition: all 0.2s ease-in-out;
 }
 
 .bounceBtn {
