@@ -36,7 +36,7 @@ body {
     user-select: none;
 }
 
-li:hover {
+.Welcome li:hover {
     background-color: #9A1B1C;
 }
 
